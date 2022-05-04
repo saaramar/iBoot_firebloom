@@ -399,8 +399,7 @@ I obviously didn't measure these overheads between old/new versions of iBoot, so
 
 I know it sounds bad when I list it this way, but to be honest - iBoot is just the place for such a change. I would be highly surprised if Apple (or any other vendor) could pull off such an expensive change in the kernel, but iBoot is a very lightweight, contained environment. It has access to the entire DRAM, and it has a very limited and specific purpose. And it makes sense to protect the second stage bootloader, which is a critical part of the secure boot process.
 
-This is a great exmaple for another effort on Apple's behalf, which improves security by mitigating a lot of 1st order primitives.
-
+This is a great example of another effort on Apple's behalf, which improves security by mitigating a lot of 1st order primitives.
 
 
 I hope you enjoyed this blogpost.
