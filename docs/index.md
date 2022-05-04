@@ -66,7 +66,7 @@ iBoot:00000001FC1AA5EC BL              __firebloom_panic
 
 There are 11 xrefs to this function. I've called *"do_firebloom_panic"* to one of them, which has other 11 xrefs, each one catches a different kind of violation:
 
-![image](https://github.com/saaramar/iBoot_firebloom/blob/main/files/do_firebloom_panic_xrefs.png)
+![image](https://github.com/saaramar/iBoot_firebloom/raw/main/files/do_firebloom_panic_xrefs.png)
 
 Ok great, now we have a (partial) list of the things firebloom explictly detects and panics upon. Because some of these new checks are on known well-defined functions (`memset`, `memcpy`), we can expect to see new wrappers to `memset` and `memcpy` , with the new checks in place. By following up the xrefs chain and keep reversing the flow, it's easy to see these wrappers.
 
@@ -184,7 +184,7 @@ Great, very simple.
 
 Let's see if the same pattern repeats itself in other places. For instance, this one:
 
-![image](https://github.com/saaramar/iBoot_firebloom/blob/main/files/ptr_check_example.png)
+![image](https://github.com/saaramar/iBoot_firebloom/raw/main/files/ptr_check_example.png)
 
 In this example, you can see a loop iterating over an array of elements (each one of size 0x20), and call some function on each element. And, unsurprisingly, the same "pointer structure" is used here, in the same way.
 
