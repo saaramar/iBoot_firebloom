@@ -356,7 +356,7 @@ iBoot:00000001FC1A1B94 ; End of function call_do_allocation
 
 It was important for me to note that, for two reasons:
 
-1. It's another approval that our understnading of the allocation API is correct.
+1. It's another approval that our understanding of the allocation API is correct.
 2. The places which call to `malloc` and not `do_safe_allocation` do not get the security properties of Firebloom.
 
 It's an interesting question why these call sites aren't updated to the new mechanism. There are few possible answers here:
