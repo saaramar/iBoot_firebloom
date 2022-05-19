@@ -385,6 +385,8 @@ iBoot:00000001FC15A9DC                 CBNZ            W22, detected_memset_bad_
 
 Yes! Looks like offset 0x18 is used to store a type. I'll elaborate more about the type safety implementation some other time. It's enough to mention that the `type` field is set by individual callers to `do_safe_allocation`, and it's easy to see it in the code.
 
+For more information regarding the `type` pointer, please check out the second blogpost: [Firebloom (iBoot) - the type descriptor](https://saaramar.github.io/iBoot_firebloom_type_desc/) :)
+
 ## Sum up / thoughts
 
 It's great to see more work on memory safety, and it's always great to have more new stuff to look into.
